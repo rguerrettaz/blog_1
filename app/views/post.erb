@@ -1,0 +1,20 @@
+<% if @post %>
+
+<h1><%= @post.title %></h1>
+<h3>Author: <%= @post.author %></h3>
+<p>Body: <%= @post.body %></p>
+
+<% tag_list = '' %>
+<% @post.tags.each do |tag| %>
+
+<p><%  tag_list += ' ' + tag.name + ','%></p>
+<% end %>
+
+<p>Tags: <%= tag_list.chop %></p>
+<br>
+<form action="/post/<%= @post.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Post!">
+</form>
+
+<% end %>

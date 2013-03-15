@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
   <link rel="stylesheet" href="/css/normalize.css">
-
+  <link rel="stylesheet" href="/css/main.css">
   <title></title>
 </head>
 <body>
+  <div class="top-nav">
+    <div class="container">
+        <h1>Kitty Blog!</h1>
+        <ul class="nav">
+            <li><a href="/">Home</a> |</li>
+            <li><a href="/posts">All Posts</a> |</li>
+            <li><a href="/create_post">Create Post</a> </li>
+        </ul>
+    </div>
+</div>
+  <nav>
+ 
+  
+</nav>
+<div class="content">
   <%= yield %>
+</div>
 </body>
 </html>

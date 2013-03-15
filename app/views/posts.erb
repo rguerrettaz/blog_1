@@ -1,0 +1,7 @@
+<% if @posts %>
+<ul>
+<% @posts.each do |p| %>
+  <li><a href='/post/<%= p.id %>'><%= p.title %></a></li>
+<% end %>
+</ul>
+<% end %>
